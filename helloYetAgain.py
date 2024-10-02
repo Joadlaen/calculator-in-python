@@ -2,23 +2,45 @@ print("Hello again World")
 
 #functions are used to decrease the RAM usage
 
+
 def addition(first, second):
-    sum = first + second
-    print(sum)
+    print(first + second)
 
 def subtraction(first, second):
-    diff = first - second
-    print(diff)
+    print(first - second)
 
 def multiplication(first, second):
-    product = first*second
-    print(product)
+    print(first*second)
 
 def division(first, second):
-    quotient = first/second
-    print(quotient)
+    print(first/second)
+
+def exponent(first, second):
+    print(first**second)
+
+def modulo(first, second):
+    print(first%second)
+
+def series(first, second):
+    start = first - 1
+    ender = 0
+    for x in range(second-first):
+        start = start + 1
+        ender = ender + start
+    ender = ender + second
+    print(ender)
+
+def tetration(first, second):
+    tetrate1 = first
+    for x in range(second):
+        tetrate1 = tetrate1**first
+    print(first**tetrate1)
+
+
+
+
 #infinite loop
-while (1>0):
+while (4>0):
     primary = int(input("First Number Please: \n"))
     secondary = int(input("Second Number Please: \n"))
     function = input("please input function: \n")
@@ -35,3 +57,15 @@ while (1>0):
 
     elif (function == "divide"):
         division(primary, secondary)
+    
+    elif (function == "index"):
+        exponent(primary, secondary)
+
+    elif (function == "mod"):
+        modulo(primary, secondary)
+    
+    elif (function == "sum"):
+        series(primary, secondary)
+
+    elif (function == "tetra"):
+        tetration(primary, secondary)
